@@ -29,7 +29,7 @@ namespace PcgRandom
             }
             else
             {
-                throw new ArgumentException($"{sequence} is not an odd number.", nameof(sequence));
+                throw new ArgumentException($"{nameof(sequence)} is not an odd number.");
             }
         }
 
@@ -63,11 +63,19 @@ namespace PcgRandom
 
         public override int Next(int maxValue)
         {
+            if (maxValue <= 0)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(maxValue)} must be larger than 0.");
+            }
             return (int)Range((uint)maxValue);
         }
 
         public override int Next(int minValue, int maxValue)
         {
+            if (!(minValue < maxValue))
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(minValue)} must be smaller than {nameof(minValue)}.");
+            }
             uint bound = (uint)(maxValue - minValue);
             uint result = Range(bound);
             return (int)(result + minValue);
