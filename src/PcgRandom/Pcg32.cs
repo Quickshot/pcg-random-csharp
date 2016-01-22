@@ -68,10 +68,15 @@ namespace PcgRandom
 
         public override int Next(int maxValue)
         {
-            if (maxValue <= 0)
+            if (maxValue < 0)
             {
-                throw new ArgumentOutOfRangeException($"{nameof(maxValue)} must be larger than 0.");
+                throw new ArgumentOutOfRangeException($"{nameof(maxValue)} must be larger or equal to 0.");
             }
+            if(maxValue == 0)
+            {
+                return 0;
+            }
+
             return (int)Range((uint)maxValue);
         }
 
