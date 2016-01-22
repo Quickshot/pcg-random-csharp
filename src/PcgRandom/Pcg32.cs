@@ -42,16 +42,16 @@ namespace PcgRandom
             return (xorshifted >> rot) | (xorshifted << (-rot & 31));
         }
 
-        public uint Range(uint bound)
+        public uint Range(uint maxValue)
         {
-            uint threshold = (uint)((0x100000000UL - bound) % bound);
+            uint threshold = (uint)((0x100000000UL - maxValue) % maxValue);
 
             for (;;)
             {
                 uint r = Random();
                 if (r >= threshold)
                 {
-                    return r % bound;
+                    return r % maxValue;
                 }
             }
         }
