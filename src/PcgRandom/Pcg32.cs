@@ -80,5 +80,15 @@ namespace PcgRandom
             uint result = Range(bound);
             return (int)(result + minValue);
         }
+
+        protected override double Sample()
+        {
+            return Random() * Math.Pow(2,-32);
+        }
+
+        public override double NextDouble()
+        {
+            return Sample();
+        }
     }
 }
