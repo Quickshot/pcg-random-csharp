@@ -1,0 +1,8 @@
+PCG Random number generator for .net
+Copyright Jukka Teittinen
+
+This software contains code derived from the pcg-random
+project (http://www.pcg-random.org) by Melissa O'Neill
+<oneill@pcg-random.org> and pcg-csharp project(https://github.com/Tectorum/pcg-csharp)
+by Kevin Harris <kevin@studiotectorum.com> both licensed under
+Apache 2.0 License.
