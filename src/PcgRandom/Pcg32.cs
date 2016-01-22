@@ -95,5 +95,35 @@ namespace PcgRandom
         {
             return $"[PCG32 state: {_state}, sequence: {_inc}]";
         }
+
+        public override void NextBytes(byte[] buffer)
+        {
+            for (var i = 0; i < buffer.Length; i=i+4)
+            {
+                var r = BitConverter.GetBytes(Random());
+                if (buffer.Length - i >= 4)
+                {
+                    buffer[i] = r[0];
+                    buffer[i + 1] = r[1];
+                    buffer[i + 2] = r[2];
+                    buffer[i + 3] = r[3];
+                }
+                else if(buffer.Length - i == 3)
+                {
+                    buffer[i] = r[0];
+                    buffer[i + 1] = r[1];
+                    buffer[i + 2] = r[2];
+                }
+                else if (buffer.Length - i == 2)
+                {
+                    buffer[i] = r[0];
+                    buffer[i + 1] = r[1];
+                }
+                else if(buffer.Length - i == 1)
+                {
+                    buffer[i] = r[0];
+                }
+            }
+        }
     }
 }
