@@ -44,6 +44,11 @@ namespace PcgRandom
 
         public uint Range(uint maxValue)
         {
+            if (maxValue == 0)
+            {
+                return 0;
+            }
+
             uint threshold = (uint)((0x100000000UL - maxValue) % maxValue);
 
             for (;;)
