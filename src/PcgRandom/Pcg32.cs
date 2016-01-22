@@ -90,5 +90,10 @@ namespace PcgRandom
         {
             return Sample();
         }
+
+        public override string ToString()
+        {
+            return $"[PCG32 state: {_state}, sequence: {_inc}]";
+        }
     }
 }
