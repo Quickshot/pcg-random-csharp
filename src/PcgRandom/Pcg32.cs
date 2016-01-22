@@ -63,7 +63,7 @@ namespace PcgRandom
 
         public override int Next()
         {
-            return (int)Random();
+            return (int)Range(int.MaxValue);
         }
 
         public override int Next(int maxValue)
