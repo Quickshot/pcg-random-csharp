@@ -86,8 +86,13 @@ namespace PcgRandom
             {
                 throw new ArgumentOutOfRangeException($"{nameof(minValue)} must be smaller than {nameof(minValue)}.");
             }
-            uint bound = (uint)(maxValue - minValue);
-            uint result = Range(bound);
+            if (minValue == maxValue)
+            {
+                return minValue;
+            }
+
+            var bound = (uint)(maxValue - minValue);
+            var result = Range(bound);
             return (int)(result + minValue);
         }
 
