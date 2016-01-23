@@ -3,8 +3,8 @@
   "description": "Implementation of PCG random number generator in C#",
   "authors": [ "Jukka Teittinen" ],
   "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "projectUrl": "https://github.com/Quickshot/pcg-random-csharp",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
 
   "frameworks": {
     "net46": { },
@@ -12,10 +12,7 @@
     "dotnet5.4": {
       "dependencies": {
         "Microsoft.CSharp": "4.0.1-beta-23516",
-        "System.Collections": "4.0.11-beta-23516",
-        "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516",
-        "System.Threading": "4.0.11-beta-23516"
+        "System.Runtime": "4.0.21-beta-23516"
       }
     }
   }
