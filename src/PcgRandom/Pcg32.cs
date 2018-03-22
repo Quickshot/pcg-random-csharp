@@ -83,7 +83,7 @@ namespace PcgRandom
         {
             ulong oldstate = _state;
             _state = unchecked(oldstate *6364136223846793005U + _inc);
-            uint xorshifted = (uint)((oldstate >> 18) ^ oldstate) >> 27;
+            uint xorshifted = (uint)(((oldstate >> 18) ^ oldstate) >> 27);
             int rot = (int)(oldstate >> 59);
             return (xorshifted >> rot) | (xorshifted << (-rot & 31));
         }
