@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2EBF4765-859C-4BDC-8115-9FF91F016599}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{917B3403-5270-45D7-800B-DF01019C32A4}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PcgRandom", "src\PcgRandom\PcgRandom.xproj", "{000BA260-F22E-4CEF-B915-56699BEFB311}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcgRandom", "src\PcgRandom\PcgRandom.csproj", "{000BA260-F22E-4CEF-B915-56699BEFB311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,5 +25,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{000BA260-F22E-4CEF-B915-56699BEFB311} = {2EBF4765-859C-4BDC-8115-9FF91F016599}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8622F205-806E-41DE-98AB-2420790E133C}
 	EndGlobalSection
 EndGlobal
